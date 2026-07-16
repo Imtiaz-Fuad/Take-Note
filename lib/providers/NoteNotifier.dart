@@ -9,7 +9,12 @@ class NoteNotifier extends ChangeNotifier {
     _firestoreService.getNotesStream().listen((updatedNotes) {
       notes = updatedNotes;
       notifyListeners();
-    });
+    },
+     onError: (error) {
+      debugPrint('Firestore stream error: $error');
+      // could also set an error flag and notifyListeners() to show a message in the UI
+    },
+    );
   }
 
   Future<void> addNote(String title, String content) async{
