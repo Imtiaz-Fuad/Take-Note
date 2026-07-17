@@ -74,7 +74,7 @@ class Notes extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => AddNote(note: Note(title: '', content: '')),
+              builder: (context) => AddNote(),
             ),
           );
         },

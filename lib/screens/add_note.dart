@@ -5,7 +5,7 @@ import 'package:take_note/providers/NoteNotifier.dart';
 
 class AddNote extends StatefulWidget {
   final Note? note;
-  const AddNote({super.key, required this.note});
+  const AddNote({super.key, this.note});
 
   @override
   State<AddNote> createState() => _AddNoteState();
