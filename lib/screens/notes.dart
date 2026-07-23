@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:take_note/providers/NoteNotifier.dart';
 import 'package:take_note/screens/add_note.dart';
 import 'package:take_note/models/note.dart';
+import 'package:take_note/screens/subscription_screen.dart';
 
 class Notes extends StatelessWidget {
   const Notes({super.key});
@@ -14,6 +15,17 @@ class Notes extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Notes'),
+         actions: [
+    IconButton(
+      icon: const Icon(Icons.subscriptions_outlined),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const SubscriptionScreen()),
+        );
+      },
+    ),
+  ],
       ),
        body: SafeArea(
         child: notes.isEmpty
