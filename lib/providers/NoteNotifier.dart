@@ -3,9 +3,9 @@ import 'package:take_note/services/firestore_service.dart';
 import 'package:take_note/models/note.dart';
 
 class NoteNotifier extends ChangeNotifier {
-  final FirestoreService _firestoreService = FirestoreService();
+  final FirestoreService _firestoreService;
   List<Note> notes = [];
-  NoteNotifier() {
+  NoteNotifier({FirestoreService? firestoreService}) : _firestoreService = firestoreService ?? FirestoreService() {
     _firestoreService.getNotesStream().listen((updatedNotes) {
       notes = updatedNotes;
       notifyListeners();
