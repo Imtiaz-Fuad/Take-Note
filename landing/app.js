@@ -1,4 +1,4 @@
-/* Take-Note landing page — mirrors lib/services/bdapps_service.dart */
+/* NoteTake landing page — mirrors lib/services/bdapps_service.dart */
 (function () {
   'use strict';
 
@@ -185,7 +185,7 @@
         showResult({
           success: true,
           title: 'Subscription confirmed',
-          message: "You're all set. Thank you for subscribing to Take-Note.",
+          message: "You're all set. Thank you for subscribing to NoteTake.",
         });
         showStep('done');
       } else {
@@ -248,7 +248,7 @@
 
     // Mirror the Flutter AlertDialog — one tap to confirm, then unsubscribe.
     const ok = window.confirm(
-      `Unsubscribe ${mobile} from Take-Note updates?\n\nYou can resubscribe anytime.`
+      `Unsubscribe ${mobile} from NoteTake updates?\n\nYou can resubscribe anytime.`
     );
     if (!ok) return;
 

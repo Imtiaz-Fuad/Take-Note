@@ -1,8 +1,8 @@
-# Take-Note — Landing Page
+# NoteTake — Landing Page
 
 A static landing page that mirrors the subscribe / OTP / unsubscribe flow
 implemented in `lib/services/bdapps_service.dart`, plus a short description of
-the Take-Note Flutter app and a download section.
+the NoteTake Flutter app and a download section.
 
 ## Files
 
